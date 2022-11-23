@@ -131,6 +131,10 @@ body{
     opacity: 1;
 }
 
+.agua:hover{
+    z-index: 5;
+}
+
 .fogo:focus{
     background-color: #520000;
     box-shadow: 0px 0px 25px 5px #ff0000, 0px 0px 25px 5px inset #000;
@@ -144,6 +148,10 @@ body{
     opacity: 1;
 }
 
+.fogo:hover{
+    z-index: 5;
+}
+
 .terra:focus{
     background-color: #042000;
     box-shadow: 0px 0px 25px 5px #149400, 0px 0px 25px 5px inset #000;
@@ -155,6 +163,10 @@ body{
 
 .terra:focus .nacaoTerra{
     opacity: 1;
+}
+
+.terra:hover{
+    z-index: 5;
 }
 
 .ar:focus{
@@ -176,6 +188,10 @@ body{
 
 .ar:focus .ilhaSudoeste{
     opacity: 1;
+}
+
+.ar:hover{
+    z-index: 5;
 }
 
 .tribos{  
@@ -201,6 +217,10 @@ body{
     opacity: 1;
 }
 
+.triboNorte:hover .aguaNorte{
+    display: block;
+}
+
 .triboSul{
     opacity: 0;
     background: radial-gradient(#001f86, transparent);
@@ -212,6 +232,10 @@ body{
 
 .triboSul:hover{
     opacity: 1;
+}
+
+.triboSul:hover .aguaSul{
+    display: block;
 }
 
 .nacaoFogo{
@@ -267,6 +291,10 @@ body{
     opacity: 1;
 }
 
+.ilhaNoroeste:hover .ilhaDosMongesNO{
+    display: block;
+}
+
 .ilhasSul{
     display: flex;
     flex-direction: row;
@@ -291,6 +319,10 @@ body{
     opacity: 1;
 }
 
+.ilhaSudeste:hover .ilhaDosMongesSE{
+    display: block;
+}
+
 .ilhaSudoeste{
     opacity: 0;
     border-radius: 50%;
@@ -305,15 +337,8 @@ body{
     opacity: 1;
 }
 
-.baSingSe{
-    display: none;
-    position: absolute;
-    width: 31.354166666666668vw;
-    height: 30.113636363636363vh;
-    background-color: #A28961;
-    border: 3px solid #FF9D00;
-    padding: 20px;
-    transform: translate(-150%, 48%);
+.ilhaSudoeste:hover .ilhaDosMongesSO{
+    display: block;
 }
 
 #info{
@@ -326,9 +351,13 @@ body{
 }
 
 .texto{
+    display: flex;
+    flex-direction: column;
     color: #fff;
     width: 50%;
     height: 80%;
+    gap: 10%;
+    justify-content: center;
 }
 
 .titulo{
@@ -356,6 +385,29 @@ body{
     background-image: url("./img/palacio.jpg");
 }
 
+.ar .foto{
+    background-image: url("./img/ilha.png");
+}
+
+.aguaNorte .foto{
+    background-image: url("./img/triboNorte.jpg");
+}
+
+.aguaSul .foto{
+    background-image: url("./img/triboSul.jpg");
+}
+
+.baSingSe{
+    display: none;
+    position: absolute;
+    width: 31.354166666666668vw;
+    height: 30.113636363636363vh;
+    background-color: #A28961;
+    border: 3px solid #FF9D00;
+    padding: 20px;
+    transform: translate(-150%, 48%);
+}
+
 .palacio{
     display: none;
     position: absolute;
@@ -365,4 +417,68 @@ body{
     border: 3px solid #FF9D00;
     padding: 20px;
     transform: translate(143%, -13%);
+}
+
+.ilhaDosMongesNO{
+    display: none;
+    position: absolute;
+    width: 31.354166666666668vw;
+    height: 30.113636363636363vh;
+    background-color: #A28961;
+    border: 3px solid #FF9D00;
+    padding: 20px;
+    transform: translate(35%, 30%);
+}
+
+.ilhaDosMongesSO{
+    display: none;
+    position: absolute;
+    width: 31.354166666666668vw;
+    height: 30.113636363636363vh;
+    background-color: #A28961;
+    border: 3px solid #FF9D00;
+    padding: 20px;
+    transform: rotate(20deg) translate(-97.8%, -59%);
+}
+
+.ilhaDosMongesSE{
+    display: none;
+    position: absolute;
+    width: 31.354166666666668vw;
+    height: 30.113636363636363vh;
+    background-color: #A28961;
+    border: 3px solid #FF9D00;
+    padding: 20px;
+    transform: translate(-9.49%, -98.6%);
+}
+
+.aguaNorte {
+    display: none;
+    position: absolute;
+    width: 31.354166666666668vw;
+    height: 30.113636363636363vh;
+    background-color: #A28961;
+    border: 3px solid #FF9D00;
+    padding: 20px;
+    transform: translate(-20.5%, 77.4%);
+}
+
+.aguaSul {
+    display: none;
+    position: absolute;
+    width: 31.354166666666668vw;
+    height: 30.113636363636363vh;
+    background-color: #A28961;
+    border: 3px solid #FF9D00;
+    padding: 20px;
+    transform: translate(-20.5%, -141.4%);
+}
+
+.instrucoes{
+    color: #1382b9;
+    font-size: 1.5rem;
+    font-family: 'Marcellus SC', serif;
+    width: 50%;
+    position: absolute;
+    transform: translate(45%, 2150%);
 }
